@@ -61,10 +61,10 @@ window.DARKTISM_CONFIG = {
   "releases": [],
   "tracks": [],
   "backend": {
-    "supabaseUrl": "",
-    "supabaseAnonKey": ""
+    "supabaseUrl": "https://hcehttjowmkcnrfnapcz.supabase.co/rest/v1/",
+    "supabaseAnonKey": "sb_publishable_z8dNbWeAd4IegstVRquxjQ_KOOw3dvE"
   },
   "contact": {
-    "web3formsKey": ""
+    "web3formsKey": "c28424ba-ae2a-4667-acb9-fcf731fd1cc8"
   }
 };
