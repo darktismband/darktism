@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Darktism</title>
+<meta name="description" content="Darktism — shock rap, distortion and VHS horror from three heads under pressure. Music, socials, community wall and reviews.">
+<meta property="og:title" content="Darktism">
+<meta property="og:description" content="Pressure makes diamonds. We make noise.">
+<meta name="theme-color" content="#07060c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 4h14l7 8-14 17L2 12z' fill='%23c9a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Martian+Mono:wght@400;600&family=Pirata+One&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="config.js" defer></script>
+<script src="assets/icons.js" defer></script>
+<script src="assets/site.js" defer></script>
+<script src="assets/store.js" defer></script>
+<script src="assets/home.js" defer></script>
+<script src="assets/diamond.js" defer></script>
+</head>
+<body data-page="home">
+<header id="site-header"></header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="band-name">
+    <div class="hero-copy">
+      <span class="eyebrow">Shock rap · Distortion · VHS horror</span>
+      <h1 class="prism" id="band-name" data-bind="bandName">Darktism</h1>
+      <p class="tagline" data-bind="tagline">Pressure makes diamonds. We make noise.</p>
+      <p class="blurb muted" data-bind="blurb">Three heads, one sound.</p>
+      <div class="btn-row">
+        <a class="btn" href="#links">Find us everywhere</a>
+        <a class="btn ghost" href="reviews.html">Rate our music</a>
+      </div>
+    </div>
+    <div class="diamond-stage" id="diamond" role="img" aria-label="A spinning diamond. Drag it to spin faster.">
+      <svg class="fallback" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="fb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#b9a6ff"/><stop offset="1" stop-color="#5ff0ff"/></linearGradient>
+          <linearGradient id="fb2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7ad9"/><stop offset="1" stop-color="#fff"/></linearGradient>
+        </defs>
+        <path d="M55 40h90l45 45-90 105L10 85z" fill="url(#fb1)"/>
+        <path d="M55 40l20 45h50l20-45zM10 85h180L100 190z" fill="url(#fb2)" opacity=".45"/>
+        <path d="M10 85h180M55 40l20 45 25 105 25-105 20-45M75 85l25-45 25 45" fill="none" stroke="#fff" stroke-width="1.2" opacity=".7"/>
+      </svg>
+      <span class="stage-hint">drag to spin</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Darktism</span><span>Shock rap</span><span>Distortion pedals</span><span>VHS tapes</span><span>Piano in minor</span><span>BandLab beats</span><span>Horrorcore</span><span>Formed under pressure</span>
+      <span>Darktism</span><span>Shock rap</span><span>Distortion pedals</span><span>VHS tapes</span><span>Piano in minor</span><span>BandLab beats</span><span>Horrorcore</span><span>Formed under pressure</span>
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <section id="members" aria-labelledby="members-h">
+    <div class="section-head">
+      <span class="eyebrow">The band · 3 stones</span>
+      <h2 id="members-h" class="prism">Three stones, one cut</h2>
+      <p class="muted">Every member is a gem. Hardness on the Mohs scale, sparkle by refractive index. Science doesn't lie.</p>
+    </div>
+    <div class="members" id="members-grid"></div>
+  </section>
+
+  <!-- MUSIC -->
+  <section id="music" aria-labelledby="music-h">
+    <div class="section-head">
+      <span class="eyebrow">Releases</span>
+      <h2 id="music-h" class="prism">Music</h2>
+    </div>
+    <div id="music-body"></div>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links" aria-labelledby="links-h">
+    <div class="section-head">
+      <span class="eyebrow">Socials &amp; streaming</span>
+      <h2 id="links-h" class="prism">Find us everywhere</h2>
+      <p class="muted">Every place Darktism lives online. Tap one and follow.</p>
+    </div>
+    <div class="links-grid" id="links-grid"></div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community" aria-labelledby="community-h">
+    <div class="section-head">
+      <span class="eyebrow">The wall</span>
+      <h2 id="community-h" class="prism">Community</h2>
+      <p class="muted">Say what's up, request a song, drop a theory. Keep it real, keep it decent.</p>
+    </div>
+    <div class="community">
+      <form class="panel form" id="wall-form" novalidate>
+        <h3>Leave a mark</h3>
+        <div class="field">
+          <label for="wall-name">Name</label>
+          <input id="wall-name" name="name" maxlength="40" autocomplete="nickname" placeholder="What do we call you?" required>
+        </div>
+        <div class="field">
+          <label for="wall-msg">Message</label>
+          <textarea id="wall-msg" name="message" maxlength="500" placeholder="Say something to the band or the fans…" required></textarea>
+          <span class="counter" id="wall-count">0 / 500</span>
+        </div>
+        <input class="hp" type="text" name="website" id="wall-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit" id="wall-submit">Post to the wall</button>
+        <p class="status" id="wall-status" role="status"></p>
+        <p class="notice" id="wall-demo" hidden>Demo mode: posts only save in this browser until the band connects the database. See README.</p>
+      </form>
+      <div class="feed" id="wall-feed" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip" aria-label="More">
+    <div class="panel">
+      <span class="eyebrow">Honest feedback</span>
+      <h3>Rate a track, roast a track</h3>
+      <p class="muted">Tell us what hit and what to fix. Every review gets read and goes into the next song.</p>
+      <div><a class="btn" href="reviews.html">Write a review</a></div>
+    </div>
+    <div class="panel">
+      <span class="eyebrow">Bookings · Collabs · Fan mail</span>
+      <h3>Hit our inbox</h3>
+      <p class="muted">Shows, features, beats, interviews, or you just want to say the VHS footage scared you.</p>
+      <div><a class="btn ghost" href="contact.html">Contact the band</a></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Darktism Control Room</title>
+<meta name="theme-color" content="#07060c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 4h14l7 8-14 17L2 12z' fill='%23c9a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Martian+Mono:wght@400;600&family=Pirata+One&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="config.js" defer></script>
+<script src="assets/icons.js" defer></script>
+<script src="assets/site.js" defer></script>
+<script src="assets/admin.js" defer></script>
+</head>
+<body data-page="admin" data-gauge="off">
+<header id="site-header"></header>
+
+<main class="wrap">
+  <section aria-labelledby="a-h">
+    <div class="section-head">
+      <span class="eyebrow">Band only</span>
+      <h1 id="a-h" class="prism" style="font-size:var(--step-3)">Control Room</h1>
+      <p class="muted">Fill this in, hit <b>Copy config</b>, then paste it over <code>config.js</code> in your GitHub repo and commit. Only people with access to the repo can change the live site, so random visitors can play with this page all they want and nothing changes.</p>
+    </div>
+
+    <div class="admin-grid">
+      <div style="display:grid;gap:22px;min-width:0">
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Paste any link</h2>
+          <div class="field">
+            <label for="detect-in">Profile link</label>
+            <input id="detect-in" placeholder="https://www.tiktok.com/@darktism">
+            <span class="hint">Paste a profile URL and it fills the right box below. Unknown sites become a custom link.</span>
+          </div>
+          <div><button class="btn" type="button" id="detect-btn">Autofill</button></div>
+          <p class="status" id="detect-status" role="status"></p>
+        </div>
+
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Handles</h2>
+          <p class="muted" style="font-size:.9rem">Type the handle only. The @ is optional. Green text shows the link it builds.</p>
+          <div class="social-inputs" id="social-inputs"></div>
+          <label style="display:flex;gap:10px;align-items:center;font-size:.9rem"><input type="checkbox" id="show-soon" style="width:auto"> Show "coming soon" tiles for the big platforms you haven't filled yet</label>
+        </div>
+
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Custom links</h2>
+          <p class="muted" style="font-size:.9rem">Anything not in the list: merch, a game on itch, a music video, Linktree, whatever.</p>
+          <div id="custom-rows" style="display:grid;gap:12px"></div>
+          <div><button class="btn ghost" type="button" id="add-custom">Add link</button></div>
+        </div>
+
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Basics</h2>
+          <div class="field"><label for="b-name">Band name</label><input id="b-name" maxlength="40"></div>
+          <div class="field"><label for="b-tag">Tagline</label><input id="b-tag" maxlength="120"></div>
+          <div class="field"><label for="b-blurb">Short bio</label><textarea id="b-blurb" maxlength="400" style="min-height:90px"></textarea></div>
+          <div class="field"><label for="b-email">Band email</label><input id="b-email" type="email" placeholder="darktismband@gmail.com"></div>
+          <div class="field"><label for="b-tracks">Things people can review (one per line)</label><textarea id="b-tracks" style="min-height:90px"></textarea><span class="hint">Released songs get added automatically.</span></div>
+        </div>
+
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Releases</h2>
+          <div id="release-rows" style="display:grid;gap:18px"></div>
+          <div><button class="btn ghost" type="button" id="add-release">Add release</button></div>
+        </div>
+
+        <div class="panel form">
+          <h2 style="font-size:var(--step-2)">Keys (from README setup)</h2>
+          <div class="field"><label for="k-supa-url">Supabase project URL</label><input id="k-supa-url" placeholder="https://xxxx.supabase.co"></div>
+          <div class="field"><label for="k-supa-key">Supabase anon public key</label><input id="k-supa-key" placeholder="eyJhbGciOi…"><span class="hint">The anon key is meant to be public. Never paste the service_role key here.</span></div>
+          <div class="field"><label for="k-w3f">Web3Forms access key</label><input id="k-w3f" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:22px;min-width:0;position:sticky;top:90px">
+        <div class="panel" style="display:grid;gap:16px">
+          <span class="eyebrow">Live preview</span>
+          <div class="links-grid" id="links-grid"></div>
+        </div>
+        <div class="panel" style="display:grid;gap:14px">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center">
+            <span class="eyebrow">config.js</span>
+            <button class="btn" type="button" id="copy-config">Copy config</button>
+          </div>
+          <pre class="code" id="config-out" tabindex="0"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>

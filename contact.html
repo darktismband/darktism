@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Contact Darktism</title>
+<meta name="description" content="Bookings, collabs and fan mail for Darktism.">
+<meta name="theme-color" content="#07060c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 4h14l7 8-14 17L2 12z' fill='%23c9a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Martian+Mono:wght@400;600&family=Pirata+One&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="config.js" defer></script>
+<script src="assets/icons.js" defer></script>
+<script src="assets/site.js" defer></script>
+<script src="assets/contact.js" defer></script>
+</head>
+<body data-page="contact">
+<header id="site-header"></header>
+
+<main class="wrap">
+  <section aria-labelledby="c-h">
+    <div class="section-head">
+      <span class="eyebrow">Inbox open</span>
+      <h1 id="c-h" class="prism" style="font-size:var(--step-4)">Contact</h1>
+      <p class="muted">Bookings, features, beat requests, press, or just fan mail. One of us reads every message.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="panel form" id="c-form" novalidate>
+        <div class="field">
+          <span class="label" id="reason-label">What's it about?</span>
+          <div class="reason-pills" role="radiogroup" aria-labelledby="reason-label">
+            <input type="radio" name="reason" id="r-booking" value="Booking" checked><label for="r-booking">Booking</label>
+            <input type="radio" name="reason" id="r-collab" value="Collab / feature"><label for="r-collab">Collab / feature</label>
+            <input type="radio" name="reason" id="r-press" value="Press"><label for="r-press">Press</label>
+            <input type="radio" name="reason" id="r-fan" value="Fan mail"><label for="r-fan">Fan mail</label>
+            <input type="radio" name="reason" id="r-other" value="Other"><label for="r-other">Other</label>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input id="c-name" maxlength="80" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="c-email">Your email</label>
+            <input id="c-email" type="email" maxlength="120" autocomplete="email" required placeholder="so we can reply">
+          </div>
+        </div>
+        <div class="field">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" maxlength="3000" required style="min-height:170px"></textarea>
+        </div>
+        <input class="hp" type="text" id="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit" id="c-submit">Send message</button>
+        <p class="status" id="c-status" role="status"></p>
+      </form>
+
+      <aside class="panel" style="display:grid;gap:16px" aria-labelledby="direct-h">
+        <span class="eyebrow">Direct line</span>
+        <h2 id="direct-h" style="font-size:var(--step-2)">Email us</h2>
+        <div id="email-slot"></div>
+        <p class="muted" style="font-size:.92rem">Faster on socials? DM us on any platform in the footer.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>
