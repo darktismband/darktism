@@ -58,7 +58,7 @@ window.DARKTISM_CONFIG = {
       "color": "#2ee59d"
     },
      {
-      "name": "Tapz",
+      "name": "tabZ",
       "gem": "Amethyst",
       "role": "Drummer · Vocalist",
       "bio": "Has a shitty drum kit, but not-so-shitty talent..",
