@@ -19,7 +19,7 @@ window.DARKTISM_CONFIG = {
     "x": "",
     "threads": "",
     "facebook": "",
-    "snapchat": "",
+    "snapchat": "darktismband",
     "twitch": "darktismband",
     "kick": "",
     "discord": "",
@@ -56,6 +56,15 @@ window.DARKTISM_CONFIG = {
       "hardness": "7.5–8",
       "ri": "1.58",
       "color": "#2ee59d"
+    },
+     {
+      "name": "Tapz",
+      "gem": "Amethyst",
+      "role": "Drummer · Vocalist",
+      "bio": "Has a shitty drum kit, but not-so-shitty talent..",
+      "hardness": "8",
+      "ri": "1.67",
+      "color": "#CB80FF"
     }
   ],
   "releases": [],
