@@ -1,32 +1,26 @@
 /* =====================================================================
    DARKTISM SITE CONFIG — the only file you need to edit.
-   Easiest way: open admin.html on your site, fill the boxes, hit
-   "Copy config", then paste it over this whole file on GitHub.
-
-   SOCIALS: just type the handle (with or without @). The site builds
-   the full link + icon for you. You can also paste a full URL.
-   Leave a platform "" and it shows as "coming soon" (or hides, see
-   showComingSoon).
+   Made in the Control Room (admin.html). Paste over config.js and commit.
    ===================================================================== */
 window.DARKTISM_CONFIG = {
   "bandName": "Darktism",
-  "tagline": "Pressure makes diamonds. We make noise.",
-  "blurb": "Three heads, one sound. Shock rap over distorted guitar, piano that goes somewhere dark, and footage shot on a VHS camcorder that has seen things.",
-  "email": "",
+  "tagline": "the autistic band of three",
+  "blurb": "we do all sorts of electric guitar and shock rap, we're in our early stages right now but expect great things",
+  "email": "darktism@gmail.com",
   "showComingSoon": true,
   "socials": {
-    "tiktok": "",
-    "instagram": "",
-    "youtube": "",
+    "tiktok": "darktismband",
+    "instagram": "darktismband",
+    "youtube": "darktismband",
     "spotify": "",
     "applemusic": "",
-    "soundcloud": "",
-    "bandlab": "",
+    "soundcloud": "darktismband",
+    "bandlab": "darktismband",
     "x": "",
     "threads": "",
     "facebook": "",
     "snapchat": "",
-    "twitch": "",
+    "twitch": "darktismband",
     "kick": "",
     "discord": "",
     "bandcamp": "",
@@ -65,7 +59,7 @@ window.DARKTISM_CONFIG = {
     }
   ],
   "releases": [],
-  "tracks": ["Overall sound", "A snippet from socials"],
+  "tracks": [],
   "backend": {
     "supabaseUrl": "",
     "supabaseAnonKey": ""
