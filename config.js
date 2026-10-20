@@ -4,7 +4,7 @@
    ===================================================================== */
 window.DARKTISM_CONFIG = {
   "bandName": "Darktism",
-  "tagline": "the autistic band of three",
+  "tagline": "the autistic band of four",
   "blurb": "we do all sorts of electric guitar and shock rap, we're in our early stages right now but expect great things",
   "email": "darktism@gmail.com",
   "showComingSoon": true,
